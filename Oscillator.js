@@ -7,7 +7,10 @@ const OscillatorSet = function (size) {
 
 OscillatorSet.prototype = {
   get pos () {
-    return this.phi.map(p => Math.sin(this.time / 10 + p))
+    return this.phi.map(p => ({
+      x: Math.sin(this.time / 10 + p),
+      y: Math.cos(this.time / 10 + p)
+    }))
   },
   get com () {
     return this.pos.reduce((sum, next, idx) => sum + idx + next, 0) / this.size
@@ -16,10 +19,14 @@ OscillatorSet.prototype = {
 
 OscillatorSet.prototype.next = function () {
   this.phi = this.phi.map(p => {
-    return p + 0.001 * this.phi.reduce(
+    return p + 0.01 * this.phi.reduce(
       (sum, next) => sum + Math.sin(next - p),
       0
-    )
+    ) / this.size
   })
   this.time += 1
+}
+
+OscillatorSet.prototype.random = function () {
+  this.phi = this.phi.map(p => Math.random() * 2 * Math.PI)
 }
