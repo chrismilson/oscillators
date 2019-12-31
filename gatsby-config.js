@@ -10,6 +10,9 @@ module.exports = {
     title: 'Oscillators',
     siteUrl: 'https://shlappas.com/oscillators',
     author: 'Chris Milson',
-    desctription: 'A simulation of coupled oscilators.'
-  }
+    description: 'A simulation of coupled oscilators.'
+  },
+  plugins: [
+    `gatsby-plugin-react-helmet`
+  ]
 }
