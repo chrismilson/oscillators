@@ -6,4 +6,10 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: 'Oscillators',
+    siteUrl: 'https://shlappas.com/oscillators',
+    author: 'Chris Milson',
+    desctription: 'A simulation of coupled oscilators.'
+  }
 }
