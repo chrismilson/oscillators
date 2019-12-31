@@ -1,0 +1,18 @@
+{
+  "name": "Oscillators",
+  "icons": [
+    {
+      "src": "/oscillators/icon/192.png",
+      "type": "image/png",
+      "size": "192x192"
+    },
+    {
+      "src": "/oscillators/icon/500.png",
+      "type": "image/png",
+      "size": "500x500"
+    }
+  ],
+  "start_url": "/oscillators/",
+  "background_color": "#FFFFF0",
+  "display": "standalone"
+}
